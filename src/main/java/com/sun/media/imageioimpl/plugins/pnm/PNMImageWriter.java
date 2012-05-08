@@ -108,9 +108,13 @@ public class PNMImageWriter extends ImageWriter {
 
     static {
         if (lineSeparator == null) {
-            String ls = (String)java.security.AccessController.doPrivileged(
+            /** Replaced Proprietary sun.security.action.GetPropoertyAction */
+			lineSeparator = System.getProperty("line.separator").getBytes();
+			/**
+			String ls = (String)java.security.AccessController.doPrivileged(
                new sun.security.action.GetPropertyAction("line.separator"));
             lineSeparator = ls.getBytes();
+			*/
         }
     }
 
