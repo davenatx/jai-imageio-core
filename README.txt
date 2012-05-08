@@ -1,6 +1,3 @@
-jai-imageio-core-standalone 
-===========================
-
 The source code for the jai-imageio-core project is copyrighted code that
 is licensed to individuals or companies who download or otherwise
 access the code.
@@ -8,10 +5,6 @@ access the code.
 The copyright notice for this project is in COPYRIGHT.txt
 
 The source code license for this project is in LICENSE.txt
-
-To build this project, use Apache Maven 2.0.9 or newer and run:
-    mvn clean install
-
 
 Standalone modifications
 ------------------------
@@ -27,33 +20,15 @@ BSD license in LICENSE.txt.
 Modifications (c) Stian Soiland-Reyes <stian@soiland-reyes.com> 2010-04-30
 
 
-Maven repository
-----------------
+How to build
+------------
+1. Download or clone repository :
+     git clone git://github.com/davenatx/jai-imageio-core.git
 
-To use jai-imageio-core-standalone from a Maven project, add:
-
-<dependency>
-    <groupId>net.java.dev.jai-imageio</groupId> 
-    <artifactId>jai-imageio-core-standalone</artifactId> 
-    <version>1.2-pre-dr-b04-2010-04-30</version> 
-</dependency>
-
-and:
-
-    <repositories>
-        <repository>
-            <releases />
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>mygrid-repository</id>
-            <name>myGrid Repository</name>
-            <url>http://www.mygrid.org.uk/maven/repository</url>
-        </repository>
-    </repositories>
-
+2. Open a shell in the project's root directory, and launch SBT.
+   
+3. Type 'publish-local' to publish the artifacts to your local ivy repo.
 
 More info
 ---------
-http://github.com/stain/jai-imageio-core
-https://jai-imageio-core.dev.java.net/
+http://java.net/projects/jai-imageio-core
