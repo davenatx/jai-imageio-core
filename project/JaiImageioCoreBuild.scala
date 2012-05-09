@@ -18,6 +18,8 @@ object JaiImageioCoreBuild extends Build {
 	  scalaVersion := "2.9.1",
 	  crossPaths := false,
 	  javacOptions ++= Seq("-source", "1.5", "-target", "1.5"),
+	  // prevent javadoc generation for java sources
+	  sources in (Compile, doc) ~= (_ filter (_.getName endsWith ".scala")),
 	  scalacOptions ++= Seq("-optimize", "-deprecation"),
 	  packageOptions := Seq(ManifestAttributes(
 	    ("Specification-Title", "Java Advanced Imaging Image I/O Tools"),
